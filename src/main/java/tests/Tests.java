@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.Color;
 import pages.FormPage;
 import pages.SuccessPage;
 
@@ -20,7 +21,22 @@ public class Tests {
     }
 
     @Test
-    public void testCase1() throws InterruptedException {
+    public void testCase9() {
+        FormPage formPage = new FormPage(driver);
+        driver.get("https://forms.liferay.com/web/forms/shared/-/form/122548");
+        formPage.clickOnElement(formPage.nameInputField);
+        formPage.clickOnElement(formPage.dateInputField);
+        formPage.clickOnElement(formPage.textArea);
+        Assert.assertEquals("This field is required.", formPage.getValue(formPage.feedbackForName));
+        Assert.assertEquals("This field is required.", formPage.getValue(formPage.feedbackForDate));
+        formPage.clickOnElement(formPage.nameInputField);
+        Assert.assertEquals("This field is required.", formPage.getValue(formPage.feedbackForTextArea));
+        Assert.assertEquals("#f48989", Color.fromString(formPage.getCssPropertyValue(formPage.feedbackForName, "border-color")).asHex());
+        Assert.assertEquals("#feefef", Color.fromString(formPage.getCssPropertyValue(formPage.feedbackForName, "background-color")).asHex());
+    }
+
+    @Test
+    public void testCase14() throws InterruptedException {
         //Fill out input fields and click on Submit button
         FormPage formPage = new FormPage(driver);
         driver.get("https://forms.liferay.com/web/forms/shared/-/form/122548");
@@ -44,7 +60,6 @@ public class Tests {
 
     @After
     public void tearDown() {
-        System.out.println("This has been done!");
         driver.close();
     }
 
