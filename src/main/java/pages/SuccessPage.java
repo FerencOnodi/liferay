@@ -18,4 +18,8 @@ public class SuccessPage {
     public String getValueOfH5Element() {
         return driver.findElement(By.xpath("//h5[@class='ddm-form-description']")).getText();
     }
+
+    public By getElementByText(String text) {
+        return By.xpath("//h1[text()=\"" + text + "\"]");
+    }
 }
