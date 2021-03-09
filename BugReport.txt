@@ -1,0 +1,145 @@
+ID: LR-1
+Title: Language selection dropdown in wrong position
+Reported by: Feri
+Priority: Low
+Description:
+    Steps to reproduce:
+        1. Navigate to Liferay Forms page
+        2. Click on Language selection button
+    Expected result:
+        - Dropdown menu should appear under the Language selection button
+    Actual result:
+        - Dropdown menu appears next to Language selection button
+
+
+ID: LR-2
+Title: Not every text changes after changing language
+Reported by: Feri
+Priority: Low
+Description:
+    Steps to reproduce:
+        1. Navigate to Liferay Forms page
+        2. Change language to Brazilian
+    Expected result:
+        - Every text visible on the site is in Brazilian
+    Actual result:
+        - Let's party rock! remains english
+
+
+ID: LR-3
+Title: Input field for names accepts invalid characters
+Reported by: Feri
+Priority: Low
+Description:
+    Steps to reproduce:
+        1. Navigate to Liferay Forms page
+        2. Enter numbers and special characters as names
+    Expected result:
+        - Input field does not accept numbers or special characters
+    Actual result:
+        - Input field accepts numbers and special characters
+    Note: If Elon Musk's child (X Æ A-12) was factored in, then it is a feature, not a bug!
+
+
+ID: LR-4
+Title: Month selector not responsive enough
+Reported by: Feri
+Priority: Low
+Description:
+    Steps to reproduce:
+        1. Navigate to Liferay Forms page
+        2. Click on Date input field
+        3. Click on Month selector dropdown menu
+        4. Press at least two keys with starting letters of months after each other, in quick succession
+    Expected result:
+        - Month related to the pressed keys should be highlighted
+    Actual result:
+        - First month is highlighted after the first key press, but highlight gets stuck on it and not changes on second key press
+
+
+ID: LR-5
+Title: Future dates accepted as birth dates
+Reported by: Feri
+Priority: High
+Description:
+    Steps to reproduce:
+        1. Navigate to Liferay Forms page
+        2. Enter future date in datepicker (Does not matter if selected or typed in)
+    Expected result:
+        - Date input field does not accept future dates
+    Actual result:
+        - Date input field accepts future dates
+
+
+ID: LR-6
+Title: Year selection not scrollable
+Reported by: Feri
+Priority: Medium
+Description:
+    Steps to reproduce:
+        1. Navigate to Liferay Forms page
+        2. Click on Date selection input field
+        3. Click on Year selection dropdown menu
+    Expected result:
+        - List of years is scrollable for easier selection
+    Actual result:
+        - List is not scrollable, you can only go back 5 years with each click
+
+
+ID: LR-7
+Title: Date input field cursor is at last position
+Reported by: Feri
+Priority: Low
+Description:
+    Steps to reproduce:
+        1. Navigate to Liferay Forms page
+        2. Click on Date selection input field
+    Expected result:
+        - Cursor should show up on the first position
+    Actual result:
+        - Cursor blinks on the last position
+
+
+ID: LR-8
+Title: Dates before 1900 are accepted as birth dates
+Reported by: Feri
+Priority: Low
+Description:
+    Steps to reproduce:
+        1. Navigate to Liferay Forms page
+        2. Enter a date before 1900 (Does not matter if selected or typed in)
+    Expected result:
+        - Date input field does not accept dates before 1900
+    Actual result:
+        - Date input field accepts dates before 1900
+    Note: The oldest living person alive was born in 1903, there is no need to have options before that)
+
+
+ID: LR-9
+Title: Field is required alert visible while input field filled out
+Reported by: Feri
+Priority: Medium
+Description:
+    Steps to reproduce:
+        1. Navigate to Liferay Forms page
+        2. While entering text to name's input field, click on any other input field
+    Expected result:
+        - Field is required alert does not show up for name's input field, as it is filled out
+    Actual result:
+        - Field is required alert is visible
+    Note: The bug affects every input field. If clicking anywhere else, the bug does not occur, only when switching between input fields
+
+
+ID: LR-10
+Title: Data lost after switching languages
+Reported by: Feri
+Priority: High
+Description:
+    Steps to reproduce:
+        1. Navigate to Liferay Forms page
+        2. Fill out input fields
+        3. Change language
+    Expected result:
+        - Language of the site is changed, data typed in still visible
+    Actual result:
+        - Language of the site is changed, data lost
