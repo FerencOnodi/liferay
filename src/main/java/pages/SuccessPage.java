@@ -10,7 +10,7 @@ public class SuccessPage {
         this.driver = driver;
     }
 
-    //Methods
+    //Functions
     public String getValueOfH1Element() {
         return driver.findElement(By.xpath("//h1[@class='ddm-form-name']")).getText();
     }

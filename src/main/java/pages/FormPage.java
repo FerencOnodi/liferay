@@ -16,14 +16,11 @@ public class FormPage {
     public By textArea = By.xpath("//textarea[contains(@name, \"$WhyDidYouJoinTheTestingArea$\")]");
     public By previousMonthButton = By.xpath("//button[@aria-label=\"angle-left\"]");
     public By submitButton = By.xpath("//button[@type=\"submit\"]");
-    public By feedbackForName = By.xpath("/html/body/div[1]/div/div/div/div/div/div/form/div[3]/div/div/div/div[1]/div/div/div[1]/div[1]/div/div/div");
-    public By feedbackForDate = By.xpath("/html/body/div[1]/div/div/div/div/div/div/form/div[3]/div/div/div/div[1]/div/div/div[1]/div[2]/div/div[2]/div");
-    public By feedbackForTextArea = By.xpath("/html/body/div[1]/div/div/div/div/div/div/form/div[3]/div/div/div/div[1]/div/div/div[2]/div/div/div/div");
     public By languageSelectButton = By.id("_com_liferay_dynamic_data_mapping_form_web_portlet_DDMFormPortlet_kldx___menu");
     public By changeLanguageButton = By.xpath("//li[@role=\"presentation\"]");
+    public By feedback = By.className("form-feedback-item");
 
-
-    //Methods
+    //Functions
     public void enterText(By locator, String text) {
         driver.findElement(locator).sendKeys(text);
     }
@@ -35,10 +32,6 @@ public class FormPage {
     public void changeLanguage() {
         driver.findElement(languageSelectButton).click();
         driver.findElement(changeLanguageButton).click();
-    }
-
-    public String getValue(By locator) {
-        return driver.findElement(locator).getText();
     }
 
     public String getCssPropertyValue(By locator, String propertyName) {
